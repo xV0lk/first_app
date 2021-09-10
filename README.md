@@ -2,7 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Really my first project
 
-I can't believe that after so _much_ study, i'm finally taking the first step.
+I can't believe that after **so much** study, i'm finally taking the first step.
+
+> _and here i am distracting myself learning markdow_ 🤦‍♂️
 
 ## Getting Started
 
