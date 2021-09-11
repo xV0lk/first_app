@@ -1,5 +1,13 @@
+import React from 'react';
+import AboutSection from '../components/AboutSection';
+
 function Home() {
-  return <div>Hello World</div>;
+  return (
+    <div>
+      <div>Hello World</div>
+      <AboutSection />
+    </div>
+  );
 }
 
 export default Home;
