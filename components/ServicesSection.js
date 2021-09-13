@@ -17,7 +17,7 @@ const ServicesSection = () => {
           <div className="card">
             <div className="icon">
               <Image src={clock} alt="clock icon" />
-              <h3>Efficientes y ágiles</h3>
+              <h3>Eficientes y ágiles</h3>
             </div>
           </div>
           <div className="card">
@@ -40,8 +40,14 @@ const ServicesSection = () => {
               </h3>
             </div>
           </div>
-          <p>Por qué elegirnos</p>
+          <p>
+            Somos la mejor solución para tus necesidades en Marketing y media
+            managing
+          </p>
         </div>
+      </div>
+      <div className="image">
+        <Image src={home2} alt="Camara" />
       </div>
     </div>
   );
