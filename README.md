@@ -2,7 +2,7 @@
 
 I can't believe that after **so much** study, i'm finally taking the first step.
 
-> _and here i am distracting myself learning markdow_ 🤦‍♂️
+> _and here i am distracting myself learning markdown_ 🤦‍♂️
 
 ## First App
 
@@ -16,4 +16,4 @@ The purpose of using next.js is in order to improve SEO and making use of static
 
 ## What's coming next
 
-After finishing the front end part, i'm thinking in refactoring the project using typescript and also create sor of a backend functionality that allows Clients to update content from a headless CMS.
+After finishing the front end part, i'm thinking in refactoring the project using typescript and also create sort of a backend functionality that allows Clients to update content from a headless CMS.
