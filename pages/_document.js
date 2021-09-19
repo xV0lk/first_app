@@ -25,6 +25,10 @@ export default class MyDocument extends Document {
         <Head>
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lobster&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

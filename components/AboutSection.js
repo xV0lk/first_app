@@ -2,10 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 
 import styled from 'styled-components';
+import { SLayout, SDescription, SHide, SIwrapper } from '../styles/styles';
 
 const AboutSection = () => {
   return (
-    <SAbout>
+    <SLayout>
       <SDescription>
         <div className="title">
           <SHide>
@@ -36,40 +37,8 @@ const AboutSection = () => {
           />
         </div>
       </SIwrapper>
-    </SAbout>
+    </SLayout>
   );
 };
-
-// Styled Components
-const SAbout = styled.div`
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5rem 10rem;
-  color: white;
-`;
-
-const SDescription = styled.div`
-  flex: 1;
-  padding-right: 5rem;
-  h2 {
-    font-weight: lighter;
-  }
-`;
-
-const SIwrapper = styled.div`
-  flex: 1;
-  overflow: hidden;
-  div {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-  }
-`;
-
-const SHide = styled.div`
-  overflow: hidden;
-`;
 
 export default AboutSection;
