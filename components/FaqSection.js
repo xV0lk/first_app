@@ -1,8 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
+import { SLayout } from '../styles/styles';
+import Link from 'next/link';
 
 const FaqSection = () => {
   return (
-    <div className="faq">
+    <SFaq>
       <h2>
         Preguntas frecuentes <span>FAQ</span>
       </h2>
@@ -17,6 +20,7 @@ const FaqSection = () => {
           </p>
         </div>
       </div>
+      <div className="faq-line" />
       <div className="question">
         <h4>Métodos de pago</h4>
         <div className="answer">
@@ -31,6 +35,7 @@ const FaqSection = () => {
           </ul>
         </div>
       </div>
+      <div className="faq-line" />
       <div className="question">
         <h4>Qué productos ofrecemos?</h4>
         <div className="answer">
@@ -46,11 +51,17 @@ const FaqSection = () => {
             <li>Fotografía de producto</li>
           </ul>
           <p>
-            Si quieres conocer más, contáctanos para contarte sobre nuestra
-            propuesta de valor.
+            Si quieres conocer más,{' '}
+            <span>
+              <Link href="/ContactUs">
+                <a>contáctanos</a>
+              </Link>
+            </span>{' '}
+            para contarte sobre nuestra propuesta de valor.
           </p>
         </div>
       </div>
+      <div className="faq-line" />
       <div className="question">
         <h4>Cuánto debo pagar?</h4>
         <div className="answer">
@@ -59,15 +70,57 @@ const FaqSection = () => {
             características de tu proyecto y tus necesidades.
           </p>
           <p>
-            {' '}
             Generaremos un paquete de soluciones único para ti siempre teniendo
-            en cuenta tu presupuesto. <span>Contáctnos para conocer más</span>
+            en cuenta tu presupuesto.
+            <span>
+              <Link href="/ContactUs">
+                <a>Contáctanos</a>
+              </Link>
+            </span>{' '}
+            para conocer más.
           </p>
-          {/* TODO: Agregar link que lleve a la pagina de contacto */}
         </div>
       </div>
-    </div>
+      <div className="faq-line" />
+    </SFaq>
   );
 };
+
+const SFaq = styled(SLayout)`
+  display: block;
+  span {
+    display: block;
+  }
+  h2 {
+    padding-bottom: 2rem;
+    font-weight: lighter;
+  }
+  .faq-line {
+    background: #cccccc;
+    height: 0.2rem;
+    margin: 2rem 0rem;
+    width: 100%;
+  }
+  .question {
+    padding: 3rem 3rem;
+    cursor: pointer;
+  }
+  .answer {
+    padding: 2rem 0rem;
+    p {
+      padding: 1rem 0rem;
+    }
+    span {
+      display: inline-block;
+      a {
+        font-weight: bold;
+        color: #23d997;
+        font-size: 1.4rem;
+        line-height: 150%;
+        text-decoration: none;
+      }
+    }
+  }
+`;
 
 export default FaqSection;
