@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Test App</title>
+        <title>Capture</title>
       </Head>
       <AboutSection />
       <ServicesSection />

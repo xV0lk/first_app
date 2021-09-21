@@ -1,6 +1,7 @@
+import Head from 'next/head';
 import styled from 'styled-components';
 
-const contacto = () => {
+const Contacto = () => {
   return (
     <SContact>
       <h1>Contacto</h1>
@@ -13,4 +14,4 @@ const SContact = styled.div`
   color: white;
 `;
 
-export default contacto;
+export default Contacto;
