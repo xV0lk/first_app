@@ -53,7 +53,7 @@ const FaqSection = () => {
           <p>
             Si quieres conocer más,{' '}
             <span>
-              <Link href="/ContactUs">
+              <Link href="/contacto">
                 <a>contáctanos</a>
               </Link>
             </span>{' '}
@@ -73,7 +73,7 @@ const FaqSection = () => {
             Generaremos un paquete de soluciones único para ti siempre teniendo
             en cuenta tu presupuesto.
             <span>
-              <Link href="/ContactUs">
+              <Link href="/contacto">
                 <a>Contáctanos</a>
               </Link>
             </span>{' '}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import styled from 'styled-components';
 import { SLayout, SDescription, SHide, SIwrapper } from '../styles/styles';
@@ -25,7 +26,9 @@ const AboutSection = () => {
           Cuéntanos sobre tu marca, somos profesionales capacitados para llevar
           tu proyecto a otro nivel.
         </p>
-        <button>Contacto</button>
+        <Link href="/contacto" passHref>
+          <button>Contacto</button>
+        </Link>
       </SDescription>
       <SIwrapper>
         <div>

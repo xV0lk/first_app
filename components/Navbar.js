@@ -5,23 +5,23 @@ const Navbar = () => {
   return (
     <SNavbar>
       <h1>
-        <Link href="/">
+        <Link href="/" scroll={false}>
           <a id="logo">Capture</a>
         </Link>
       </h1>
       <ul>
         <li>
-          <Link href="/">
+          <Link href="/" scroll={false}>
             <a>1. Qué hacemos</a>
           </Link>
         </li>
         <li>
-          <Link href="/OurWork">
+          <Link href="/work">
             <a>2. Nuestros trabajos</a>
           </Link>
         </li>
         <li>
-          <Link href="/ContactUs">
+          <Link href="/contacto">
             <a>3. Contáctanos</a>
           </Link>
         </li>

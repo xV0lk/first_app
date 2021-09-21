@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  *{
+  *,
+  *::before,
+  *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,8 +23,13 @@ const GlobalStyle = createGlobalStyle`
     color: white;
     transition: all 0.5s ease;
     &:hover{
-      border-color:#23d997;
+      background-color:#23d997;
       color: white;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
     }
   }
   h2{

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const ContactUs = () => {
+const contacto = () => {
   return (
     <SContact>
-      <h1>Contact Us</h1>
+      <h1>Contacto</h1>
     </SContact>
   );
 };
@@ -13,4 +13,4 @@ const SContact = styled.div`
   color: white;
 `;
 
-export default ContactUs;
+export default contacto;
