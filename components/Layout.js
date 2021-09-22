@@ -7,7 +7,6 @@ const Layout = ({ children }) => {
   const pageTitle = router.pathname;
   const titleArr = pageTitle.split('/');
   const title = titleArr[1].charAt().toUpperCase() + titleArr[1].slice(1);
-  console.log(title);
   return (
     <>
       <NextSeo
