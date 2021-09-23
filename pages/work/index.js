@@ -1,61 +1,34 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
-import athlete from '../../src/img/athlete-small.png';
-import theracer from '../../src/img/theracer-small.png';
-import goodtimes from '../../src/img/goodtimes-small.png';
+import { AllJobs } from '../../src/allJobs';
 
 const OurWork = () => {
+  const jobs = AllJobs();
   return (
     <SWork>
-      <SMovie>
-        <h2>Atleta</h2>
-        <div className="line"></div>
-        <Link href="/" passHref>
-          <div>
-            <Image
-              src={athlete}
-              alt="Boxeador"
-              objectFit="cover"
-              layout="fill"
-            />
-          </div>
-        </Link>
-      </SMovie>
-      <SMovie>
-        <h2>Modelo</h2>
-        <div className="line"></div>
-        <Link href="/" passHref>
-          <div>
-            <Image
-              src={theracer}
-              alt="Modelo"
-              objectFit="cover"
-              layout="fill"
-            />
-          </div>
-        </Link>
-      </SMovie>
-      <SMovie>
-        <h2>Momentos</h2>
-        <div className="line"></div>
-        <Link href="/" passHref>
-          <div>
-            <Image
-              src={goodtimes}
-              alt="Pareja"
-              objectFit="cover"
-              layout="fill"
-            />
-          </div>
-        </Link>
-      </SMovie>
+      {jobs.map((job) => (
+        <SJob key={job.id}>
+          <h2>{job.title}</h2>
+          <div className="line"></div>
+          <Link href="/work/[job]" as={`/work/${job.route}`} passHref>
+            <div className="img-container">
+              <Image
+                src={job.mainImg}
+                alt={job.title}
+                objectFit="cover"
+                layout="fill"
+              />
+            </div>
+          </Link>
+        </SJob>
+      ))}
     </SWork>
   );
 };
 
 const SWork = styled.div`
-  min-height: 100vh;
+  min-height: 80vh;
   overflow: hidden;
   padding: 5rem 10rem;
   h2 {
@@ -63,7 +36,7 @@ const SWork = styled.div`
   }
 `;
 
-const SMovie = styled.div`
+const SJob = styled.div`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
@@ -74,6 +47,9 @@ const SMovie = styled.div`
     position: relative;
     width: 100%;
     height: 70vh;
+  }
+  .img-container {
+    cursor: pointer;
   }
 `;
 
