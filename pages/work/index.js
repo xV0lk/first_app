@@ -2,16 +2,24 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { AllJobs } from '../../src/allJobs';
+// animations
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../../src/animation.js';
 
 const OurWork = () => {
   const jobs = AllJobs();
   return (
-    <SWork>
+    <SWork variants={pageAnimation} initial="hidden" animate="show" exit="exit">
       {jobs.map((job) => (
         <SJob key={job.id}>
           <h2>{job.title}</h2>
           <div className="line"></div>
-          <Link href="/work/[job]" as={`/work/${job.route}`} passHref>
+          <Link
+            href="/work/[job]"
+            as={`/work/${job.route}`}
+            scroll={false}
+            passHref
+          >
             <div className="img-container">
               <Image
                 src={job.mainImg}
@@ -27,7 +35,7 @@ const OurWork = () => {
   );
 };
 
-const SWork = styled.div`
+const SWork = styled(motion.div)`
   min-height: 80vh;
   overflow: hidden;
   padding: 5rem 10rem;
@@ -43,13 +51,11 @@ const SJob = styled.div`
     background: #cccccc;
     margin-bottom: 3rem;
   }
-  div {
+  .img-container {
+    cursor: pointer;
     position: relative;
     width: 100%;
     height: 70vh;
-  }
-  .img-container {
-    cursor: pointer;
   }
 `;
 

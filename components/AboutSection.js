@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { SLayout, SDescription, SHide, SIwrapper } from '../styles/styles';
 
 const AboutSection = () => {
@@ -26,7 +26,7 @@ const AboutSection = () => {
           Cuéntanos sobre tu marca, somos profesionales capacitados para llevar
           tu proyecto a otro nivel.
         </p>
-        <Link href="/contacto" passHref>
+        <Link href="/contacto" scroll={false} passHref>
           <button>Contacto</button>
         </Link>
       </SDescription>

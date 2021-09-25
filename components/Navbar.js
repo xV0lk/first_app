@@ -16,12 +16,12 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link href="/work">
+          <Link href="/work" scroll={false}>
             <a>2. Nuestros trabajos</a>
           </Link>
         </li>
         <li>
-          <Link href="/contacto">
+          <Link href="/contacto" scroll={false}>
             <a>3. Contáctanos</a>
           </Link>
         </li>
