@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SLayout = styled.div`
   min-height: 90vh;
@@ -11,7 +11,9 @@ export const SLayout = styled.div`
 
 export const SDescription = styled.div`
   flex: 1;
+  z-index: 2;
   padding-right: 5rem;
+
   h2 {
     font-weight: lighter;
   }
@@ -19,7 +21,9 @@ export const SDescription = styled.div`
 
 export const SIwrapper = styled.div`
   flex: 1;
+  z-index: 2;
   overflow: hidden;
+
   div {
     position: relative;
     width: 100%;

@@ -1,9 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
-import { motion } from 'framer-motion';
-import { SLayout, SDescription, SHide, SIwrapper } from '../styles/styles';
+import { motion } from "framer-motion";
+import { SDescription, SHide, SIwrapper, SLayout } from "../styles/styles";
+import { fade, photoAnim, titleAnim } from "../src/animation";
+import Wave from "./wave";
 
 const AboutSection = () => {
   return (
@@ -11,35 +13,36 @@ const AboutSection = () => {
       <SDescription>
         <div className="title">
           <SHide>
-            <h2>Hacemos</h2>
+            <motion.h2 variants={titleAnim}>Hacemos</motion.h2>
           </SHide>
           <SHide>
-            <h2>
+            <motion.h2 variants={titleAnim}>
               tus <span>sueños</span>
-            </h2>
+            </motion.h2>
           </SHide>
           <SHide>
-            <h2>realidad.</h2>
+            <motion.h2 variants={titleAnim}>realidad.</motion.h2>
           </SHide>
         </div>
-        <p>
+        <motion.p variants={fade}>
           Cuéntanos sobre tu marca, somos profesionales capacitados para llevar
           tu proyecto a otro nivel.
-        </p>
+        </motion.p>
         <Link href="/contacto" scroll={false} passHref>
-          <button>Contacto</button>
+          <motion.button variants={fade}>Contacto</motion.button>
         </Link>
       </SDescription>
       <SIwrapper>
-        <div>
+        <motion.div variants={photoAnim}>
           <Image
             src="/home1.png"
             alt="Fotógrafo"
             objectFit="cover"
             layout="fill"
           />
-        </div>
+        </motion.div>
       </SIwrapper>
+      <Wave />
     </SLayout>
   );
 };
