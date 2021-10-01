@@ -4,7 +4,14 @@ import styled from "styled-components";
 import { AllJobs } from "../../src/allJobs";
 // animations
 import { motion } from "framer-motion";
-import { pageAnimation } from "../../src/animation.js";
+import {
+  fade,
+  lineAnim,
+  pageAnimation,
+  photoAnim,
+  sliderAnim,
+  sliderContainer,
+} from "../../src/animation.js";
 
 const OurWork = () => {
   const jobs = AllJobs();
@@ -16,24 +23,35 @@ const OurWork = () => {
       exit="exit"
       style={{ background: "#fff" }}
     >
+      {/* Frame animations*/}
+      {/*--------------------------------------------*/}
+      <motion.div variants={sliderContainer}>
+        <SFrame1 variants={sliderAnim} />
+        <SFrame2 variants={sliderAnim} />
+        <SFrame3 variants={sliderAnim} />
+        <SFrame4 variants={sliderAnim} />
+      </motion.div>
+      {/*--------------------------------------------*/}
       {jobs.map((job) => (
         <SJob key={job.id}>
-          <h2>{job.title}</h2>
-          <div className="line"></div>
+          <motion.h2 variants={fade}>{job.title}</motion.h2>
+          <motion.div className="line" variants={lineAnim} />
           <Link
             href="/work/[job]"
             as={`/work/${job.route}`}
             scroll={false}
             passHref
           >
-            <div className="img-container">
-              <Image
-                src={job.mainImg}
-                alt={job.title}
-                objectFit="cover"
-                layout="fill"
-              />
-            </div>
+            <SHide>
+              <motion.div className="img-container" variants={photoAnim}>
+                <Image
+                  src={job.mainImg}
+                  alt={job.title}
+                  objectFit="cover"
+                  layout="fill"
+                />
+              </motion.div>
+            </SHide>
           </Link>
         </SJob>
       ))}
@@ -47,7 +65,7 @@ const SWork = styled(motion.div)`
   padding: 5rem 10rem;
 
   h2 {
-    padding: 1rem 0rem;
+    padding: 1rem 0;
     color: black;
   }
 `;
@@ -57,7 +75,7 @@ const SJob = styled.div`
 
   .line {
     height: 0.5rem;
-    background: #cccccc;
+    background: #23d997;
     margin-bottom: 3rem;
   }
 
@@ -69,4 +87,30 @@ const SJob = styled.div`
   }
 `;
 
+const SHide = styled.div`
+  overflow: hidden;
+`;
+
+// Frame Animation
+const SFrame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100vh;
+  background: #fffebf;
+  z-index: 2;
+`;
+
+const SFrame2 = styled(SFrame1)`
+  background: #ff8efb;
+`;
+
+const SFrame3 = styled(SFrame1)`
+  background: #8ed2ff;
+`;
+
+const SFrame4 = styled(SFrame1)`
+  background: #8effa0;
+`;
 export default OurWork;
