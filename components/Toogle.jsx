@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const Toggle = ({ children, title }) => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   return (
     <motion.div
       layout
@@ -17,3 +17,5 @@ const Toggle = ({ children, title }) => {
 };
 
 export default Toggle;
+
+// TODO: refactor this component in order to have a smoother animation and work with a cms

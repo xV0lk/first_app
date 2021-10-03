@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 import { SDescription, SHide, SIwrapper, SLayout } from "../styles/styles";
-import { fade, photoAnim, titleAnim } from "../src/animation";
+import { fadeAnim, photoAnim, titleAnim } from "../src/animation";
 import Wave from "./wave";
 
 const AboutSection = () => {
@@ -24,12 +24,12 @@ const AboutSection = () => {
             <motion.h2 variants={titleAnim}>realidad.</motion.h2>
           </SHide>
         </div>
-        <motion.p variants={fade}>
+        <motion.p variants={fadeAnim}>
           Cuéntanos sobre tu marca, somos profesionales capacitados para llevar
           tu proyecto a otro nivel.
         </motion.p>
         <Link href="/contacto" scroll={false} passHref>
-          <motion.button variants={fade}>Contacto</motion.button>
+          <motion.button variants={fadeAnim}>Contacto</motion.button>
         </Link>
       </SDescription>
       <SIwrapper>

@@ -4,11 +4,19 @@ import { SLayout } from "../styles/styles";
 import Link from "next/link";
 import Toggle from "./Toogle";
 import { AnimateSharedLayout } from "framer-motion";
+import { useScroll } from "./useScroll";
+import { fadeAnim } from "../src/animation";
 
 const FaqSection = () => {
   //TODO: CONNECT THIS TO A CMS. MAKE A TEMPLATE AND BRING THEM ALL
+  const [element, controls] = useScroll();
   return (
-    <SFaq>
+    <SFaq
+      variants={fadeAnim}
+      animate={controls}
+      initial={"hidden"}
+      ref={element}
+    >
       <h2>
         Preguntas frecuentes <span>FAQ</span>
       </h2>
