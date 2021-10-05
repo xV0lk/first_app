@@ -8,13 +8,13 @@ const Navbar = () => {
   return (
     <SNavbar>
       <h1>
-        <Link href="/" scroll={false}>
+        <Link href="/" scroll={false} passHref>
           <motion.a
             id="logo"
             whileHover={{ color: "#23d997" }}
             whileTap={{ background: "#23d997" }}
           >
-            Capture
+            Content
           </motion.a>
         </Link>
       </h1>
