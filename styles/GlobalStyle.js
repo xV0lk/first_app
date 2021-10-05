@@ -1,18 +1,21 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   *,
   *::before,
-  *::after{
+  *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  body{
+
+  body {
     background: #1b1b1b;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
   }
-  button{
+
+  button {
     font-weight: bold;
     font-size: 1.1rem;
     font-family: 'Inter', sans-serif;
@@ -22,48 +25,57 @@ const GlobalStyle = createGlobalStyle`
     background: transparent;
     color: white;
     transition: all 0.5s ease;
-    &:hover{
-      background-color:#23d997;
+
+    &:hover {
+      background-color: #23d997;
       color: white;
     }
-    a{
+
+    a {
       text-decoration: none;
       color: white;
     }
-    }
   }
-  h2{
+
+  h2 {
     color: white;
     font-weight: lighter;
     font-size: 4rem;
   }
-  h3{
+
+  h3 {
     color: white;
   }
+
   h4 {
     font-size: 2rem;
     font-weight: bold;
     color: white;
   }
-  a{
+
+  a {
     font-size: 1.1rem;
   }
-  span{
+
+  span {
     font-weight: bold;
-    color:#23d997
+    color: #23d997
   }
-  p{
+
+  p {
     padding: 3rem 0rem;
     color: #ccc;
     font-size: 1.4rem;
     line-height: 150%
   }
-  ul{
+
+  ul {
     list-style-type: circle;
     list-style-position: inside;
     padding: 3rem 0rem;
   }
-  li{
+
+  li {
     color: #ccc;
     font-size: 1.4rem;
     line-height: 150%
