@@ -1,7 +1,27 @@
 {
-  "extends": "next/core-web-vitals",
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "next",
+    "plugin:@next/next/recommended",
+    "next/core-web-vitals"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
   "rules": {
     "react/display-name": "off",
-    "@next/next/no-img-element": "off"
+    "@next/next/no-img-element": "off",
+    "jsx-a11y/anchor-is-valid": "off"
   }
 }

@@ -1,27 +1,22 @@
-import React from "react";
-import styled from "styled-components";
-import { SLayout } from "../styles/styles";
-import Link from "next/link";
-import Toggle from "./Toogle";
-import { AnimateSharedLayout } from "framer-motion";
-import { useScroll } from "./useScroll";
-import { fadeAnim } from "../src/animation";
+import React from 'react';
+import Link from 'next/link';
+import { AnimateSharedLayout } from 'framer-motion';
+import styled from 'styled-components';
+import { SLayout } from '../styles/styles';
+import Toggle from './Toogle';
+import { useScroll } from './useScroll';
+import { fadeAnim } from '../src/animation';
 
 const FaqSection = () => {
-  //TODO: CONNECT THIS TO A CMS. MAKE A TEMPLATE AND BRING THEM ALL
+  // TODO: CONNECT THIS TO A CMS. MAKE A TEMPLATE AND BRING THEM ALL
   const [element, controls] = useScroll();
   return (
-    <SFaq
-      variants={fadeAnim}
-      animate={controls}
-      initial={"hidden"}
-      ref={element}
-    >
+    <SFaq variants={fadeAnim} animate={controls} initial="hidden" ref={element}>
       <h2>
         Preguntas frecuentes <span>FAQ</span>
       </h2>
       <AnimateSharedLayout>
-        <Toggle title={`Cómo inicio?`}>
+        <Toggle title="Cómo inicio?">
           <div className="question">
             <div className="answer">
               <p>Iniciar es muy fácil.</p>
@@ -33,7 +28,7 @@ const FaqSection = () => {
             </div>
           </div>
         </Toggle>
-        <Toggle title={`Métodos de pago`}>
+        <Toggle title="Métodos de pago">
           <div className="question">
             <div className="answer">
               <p>Ponemos diversos medios de pago a tu disposición:</p>
@@ -48,7 +43,7 @@ const FaqSection = () => {
             </div>
           </div>
         </Toggle>
-        <Toggle title={`Qué productos ofrecemos?`}>
+        <Toggle title="Qué productos ofrecemos?">
           <div className="question">
             <div className="answer">
               <p>
@@ -63,18 +58,18 @@ const FaqSection = () => {
                 <li>Fotografía de producto</li>
               </ul>
               <p>
-                Si quieres conocer más,{" "}
+                Si quieres conocer más,{' '}
                 <span>
                   <Link href="/contacto" scroll={false}>
                     <a>contáctanos</a>
                   </Link>
-                </span>{" "}
+                </span>{' '}
                 para contarte sobre nuestra propuesta de valor.
               </p>
             </div>
           </div>
         </Toggle>
-        <Toggle title={`Cuánto debo pagar?`}>
+        <Toggle title="Cuánto debo pagar?">
           <div className="question">
             <div className="answer">
               <p>
@@ -88,7 +83,7 @@ const FaqSection = () => {
                   <Link href="/contacto" scroll={false}>
                     <a>Contáctanos</a>
                   </Link>
-                </span>{" "}
+                </span>{' '}
                 para conocer más.
               </p>
             </div>
@@ -121,6 +116,9 @@ const SFaq = styled(SLayout)`
   .question {
     padding: 1.2rem 0;
     cursor: pointer;
+    @media (max-width: 700px) {
+      padding: 1.2rem 5rem;
+    }
   }
 
   .answer {
@@ -145,6 +143,11 @@ const SFaq = styled(SLayout)`
     ul {
       margin: 0;
       padding-bottom: 0;
+    }
+  }
+  @media (max-width: 1100px) {
+    h2 {
+      margin-bottom: 4rem;
     }
   }
 `;

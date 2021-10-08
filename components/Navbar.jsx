@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const { pathname } = useRouter();
@@ -9,39 +9,31 @@ const Navbar = () => {
     <SNavbar>
       <h1>
         <Link href="/" scroll={false} passHref>
-          <motion.a
-            id="logo"
-            whileHover={{ color: "#23d997" }}
-            whileTap={{ background: "#23d997" }}
-          >
+          <motion.a id="logo" whileHover={{ color: '#23d997' }}>
             Content
           </motion.a>
         </Link>
       </h1>
       <ul>
-        <li>
-          <Link href="/" scroll={false}>
-            <a className={pathname === "/" ? "active" : ""}>Qué hacemos</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/work" scroll={false}>
-            <a className={pathname === "/work" ? "active" : ""}>
-              Nuestros trabajos
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/contacto" scroll={false}>
-            <a className={pathname === "/contacto" ? "active" : ""}>
-              Contáctanos
-            </a>
-          </Link>
-        </li>
+        <NavItem target="" name="Qué hacemos" />
+        <NavItem target="work" name="Nuestros trabajos" />
+        <NavItem target="contacto" name="Contáctanos" />
       </ul>
     </SNavbar>
   );
 };
+function NavItem({ target, name }) {
+  const { pathname } = useRouter();
+  console.log(target);
+  console.log(name);
+  return (
+    <li>
+      <Link href={`/${target}`} scroll={false}>
+        <a className={pathname === `/${target}` ? 'active' : ''}>{name}</a>
+      </Link>
+    </li>
+  );
+}
 
 const SNavbar = styled.nav`
   min-height: 10vh;
@@ -49,7 +41,7 @@ const SNavbar = styled.nav`
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 10rem;
+  padding: 0 10rem;
   /* padding: 1rem 10rem; */
   background: #282828;
   position: sticky;
@@ -87,7 +79,7 @@ const SNavbar = styled.nav`
 
   #logo {
     font-size: 1.7rem;
-    font-family: "Lobster", cursive;
+    font-family: 'Lobster', cursive;
     font-weight: lighter;
   }
 `;

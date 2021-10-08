@@ -1,15 +1,36 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { motion } from "framer-motion";
-import { SDescription, SHide, SIwrapper, SLayout } from "../styles/styles";
-import { fadeAnim, photoAnim, titleAnim } from "../src/animation";
-import Wave from "./wave";
+import { motion } from 'framer-motion';
+import { SDescription, SHide, SIwrapper, SLayout } from '../styles/styles';
+import {
+  fadeAnim,
+  pageAnimation,
+  photoAnim,
+  titleAnim,
+} from '../src/animation';
+import Wave from './wave';
 
 const AboutSection = () => {
+  const [width, setWidth] = useState();
+  const visible = width > 1100;
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    const updateWidth = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  });
   return (
-    <SLayout>
+    <SLayout
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <SDescription>
         <div className="title">
           <SHide>
@@ -42,7 +63,7 @@ const AboutSection = () => {
           />
         </motion.div>
       </SIwrapper>
-      <Wave />
+      {visible && <Wave />}
     </SLayout>
   );
 };

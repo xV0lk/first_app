@@ -1,15 +1,15 @@
-import React from "react";
-import Image from "next/image";
-import clock from "../src/img/clock.svg";
-import diaphragm from "../src/img/diaphragm.svg";
-import money from "../src/img/money.svg";
-import teamwork from "../src/img/teamwork.svg";
-import home2 from "../src/img/home2.png";
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import Image from 'next/image';
+import clock from '../src/img/clock.svg';
+import diaphragm from '../src/img/diaphragm.svg';
+import money from '../src/img/money.svg';
+import teamwork from '../src/img/teamwork.svg';
+import home2 from '../src/img/home2.png';
 
-import styled from "styled-components";
-import { SDescription, SIwrapper, SLayout } from "../styles/styles";
-import { useScroll } from "./useScroll";
-import { fadeAnim } from "../src/animation";
+import { SDescription, SIwrapper, SLayout } from '../styles/styles';
+import { useScroll } from './useScroll';
+import { fadeAnim } from '../src/animation';
 
 const ServicesSection = () => {
   const [element, controls] = useScroll();
@@ -17,7 +17,7 @@ const ServicesSection = () => {
     <SServices
       animate={controls}
       variants={fadeAnim}
-      initial={"hidden"}
+      initial="hidden"
       ref={element}
     >
       <SDescription>
@@ -25,14 +25,14 @@ const ServicesSection = () => {
           Servicios de <span>alta</span> calidad.
         </h2>
         <SCards>
-          <Scard>
+          <SCard>
             <div className="icon">
               <Image src={clock} alt="clock icon" />
               <h3>Agilidad</h3>
             </div>
-            <p>Generamos soluciones oportunas para los desafíos del mercado.</p>
-          </Scard>
-          <Scard>
+            <p>Soluciones oportunas para los desafíos del mercado.</p>
+          </SCard>
+          <SCard>
             <div className="icon">
               <Image src={diaphragm} alt="diaphragm icon" />
               <h3>Calidad</h3>
@@ -40,21 +40,21 @@ const ServicesSection = () => {
             <p>
               Desarrollamos proyectos con fotografía y diseño de alta calidad.
             </p>
-          </Scard>
-          <Scard>
+          </SCard>
+          <SCard>
             <div className="icon">
               <Image src={money} alt="money icon" />
               <h3>Costo</h3>
             </div>
-            <p>Nuestra propuesta se adecua a tus necesidades y presupuesto.</p>
-          </Scard>
-          <Scard>
+            <p>Nos se adecuamos a tus necesidades y presupuesto.</p>
+          </SCard>
+          <SCard>
             <div className="icon">
               <Image src={teamwork} alt="teamwork icon" />
               <h3>Profesionales</h3>
             </div>
-            <p>Nos comprometemos y dedicamos a tu crecimiento</p>
-          </Scard>
+            <p>Comprometidos y dedicamos con tu crecimiento</p>
+          </SCard>
         </SCards>
       </SDescription>
       <SIwrapper>
@@ -80,10 +80,13 @@ const SServices = styled(SLayout)`
 const SCards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1100px) {
+    justify-content: center;
+  }
 `;
 
-const Scard = styled.div`
-  flex-basis: 20rem;
+const SCard = styled.div`
+  flex-basis: calc(100% / 2);
 
   .icon {
     display: flex;
@@ -95,6 +98,23 @@ const Scard = styled.div`
       color: black;
       padding: 1rem;
     }
+  }
+  @media (max-width: 1100px) {
+    flex-basis: calc(80% / 2);
+    padding: 2rem 3rem;
+    .icon {
+      justify-content: center;
+    }
+    p {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    flex-basis: calc(90% / 2);
+  }
+  @media (max-width: 500px) {
+    flex-basis: calc(100% / 2);
   }
 `;
 
