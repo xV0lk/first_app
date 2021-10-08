@@ -11,6 +11,7 @@ function Home() {
   return (
     <>
       <Head>
+        <link rel="stylesheet" href="../styles/load.css" />
         <title>Capture</title>
       </Head>
       <motion.div
@@ -18,7 +19,6 @@ function Home() {
         initial="hidden"
         animate="show"
         exit="exit"
-        style={{ backgroundColor: '#1b1b1b', fontFamily: 'Inter' }}
       >
         <AboutSection />
         <ServicesSection />
