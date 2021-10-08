@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import clock from '../src/img/clock.svg';
@@ -6,9 +6,9 @@ import diaphragm from '../src/img/diaphragm.svg';
 import money from '../src/img/money.svg';
 import teamwork from '../src/img/teamwork.svg';
 import home2 from '../src/img/home2.png';
+import { useScroll } from './useScroll';
 
 import { SDescription, SIwrapper, SLayout } from '../styles/styles';
-import { useScroll } from './useScroll';
 import { fadeAnim } from '../src/animation';
 
 const ServicesSection = () => {

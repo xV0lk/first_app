@@ -3,25 +3,22 @@ import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-const Navbar = () => {
-  const { pathname } = useRouter();
-  return (
-    <SNavbar>
-      <h1>
-        <Link href="/" scroll={false} passHref>
-          <motion.a id="logo" whileHover={{ color: '#23d997' }}>
-            Content
-          </motion.a>
-        </Link>
-      </h1>
-      <ul>
-        <NavItem target="" name="Qué hacemos" />
-        <NavItem target="work" name="Nuestros trabajos" />
-        <NavItem target="contacto" name="Contáctanos" />
-      </ul>
-    </SNavbar>
-  );
-};
+const Navbar = () => (
+  <SNavbar>
+    <h1>
+      <Link href="/" scroll={false} passHref>
+        <motion.a id="logo" whileHover={{ color: '#23d997' }}>
+          Content
+        </motion.a>
+      </Link>
+    </h1>
+    <ul>
+      <NavItem target="" name="Qué hacemos" />
+      <NavItem target="work" name="Nuestros trabajos" />
+      <NavItem target="contacto" name="Contáctanos" />
+    </ul>
+  </SNavbar>
+);
 function NavItem({ target, name }) {
   const { pathname } = useRouter();
   console.log(target);

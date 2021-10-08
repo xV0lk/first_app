@@ -1,41 +1,39 @@
-import { motion } from "framer-motion";
-import styled from "styled-components";
-import { pageAnimation, titleAnim } from "../src/animation";
+import { motion } from 'framer-motion';
+import styled from 'styled-components';
+import { pageAnimation, titleAnim } from '../src/animation';
 
-const Contacto = () => {
-  return (
-    <SContact
-      variants={pageAnimation}
-      initial="hidden"
-      animate="show"
-      exit="exit"
-    >
-      <STitle>
-        <SHide>
-          <motion.h2 variants={titleAnim}>Contacto</motion.h2>
-        </SHide>
-      </STitle>
+const Contacto = () => (
+  <SContact
+    variants={pageAnimation}
+    initial="hidden"
+    animate="show"
+    exit="exit"
+  >
+    <STitle>
       <SHide>
-        <SSocial variants={titleAnim}>
-          <SCircle />
-          <h2>Envíanos un mensaje</h2>
-        </SSocial>
+        <motion.h2 variants={titleAnim}>Contacto</motion.h2>
       </SHide>
-      <SHide>
-        <SSocial variants={titleAnim}>
-          <SCircle />
-          <h2>Envíanos un correo</h2>
-        </SSocial>
-      </SHide>
-      <SHide>
-        <SSocial variants={titleAnim}>
-          <SCircle />
-          <h2>Redes Sociales</h2>
-        </SSocial>
-      </SHide>
-    </SContact>
-  );
-};
+    </STitle>
+    <SHide>
+      <SSocial variants={titleAnim}>
+        <SCircle />
+        <h2>Envíanos un mensaje</h2>
+      </SSocial>
+    </SHide>
+    <SHide>
+      <SSocial variants={titleAnim}>
+        <SCircle />
+        <h2>Envíanos un correo</h2>
+      </SSocial>
+    </SHide>
+    <SHide>
+      <SSocial variants={titleAnim}>
+        <SCircle />
+        <h2>Redes Sociales</h2>
+      </SSocial>
+    </SHide>
+  </SContact>
+);
 
 const SContact = styled(motion.div)`
   padding: 5rem 10rem;

@@ -1,19 +1,19 @@
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { AllJobs } from '../../src/allJobs';
 import Award from '../../components/Award';
-import ErrorPage from '../../components/ErrorPage';
+
 // animations
-import { motion } from 'framer-motion';
-import { pageAnimation } from '../../src/animation.js';
+import { pageAnimation } from '../../src/animation';
 
 const WorkPage = () => {
   const router = useRouter();
   const jobs = AllJobs();
   const { job } = router.query;
   const [actualJob] = jobs.filter((stateJob) => stateJob.route === job);
-  //TODO: Connect to sanity or any other cms
+  // TODO: Connect to sanity or any other cms
   if (actualJob) {
     return (
       <SWork
@@ -50,9 +50,8 @@ const WorkPage = () => {
         </SSImage>
       </SWork>
     );
-  } else {
-    return null;
   }
+  return null;
 };
 
 const SWork = styled(motion.div)`
