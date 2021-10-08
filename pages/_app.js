@@ -4,6 +4,7 @@ import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
 import GlobalStyle from '../styles/GlobalStyle';
 import Layout from '../components/Layout';
+import Navbar from '../components/Navbar';
 
 function MyApp({ Component, pageProps, router }) {
   return (
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps, router }) {
         onExitComplete={() => window.scrollTo(0, 0)}
       >
         <Layout>
+          <Navbar />
           <Component {...pageProps} key={router.route} />
         </Layout>
       </AnimatePresence>
