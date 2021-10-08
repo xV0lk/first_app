@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { AllJobs } from '../../src/allJobs';
+import AllJobs from '../../src/allJobs';
 import Award from '../../components/Award';
 
 // animations

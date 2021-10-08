@@ -1,10 +1,10 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { fadeAnim, lineAnim } from "../src/animation";
-import Link from "next/link";
-import Image from "next/image";
-import styled from "styled-components";
-import { useScroll } from "./useScroll";
+import React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
+import styled from 'styled-components';
+import { fadeAnim, lineAnim } from '../src/animation';
+import { useScroll } from './useScroll';
 
 const Component = React.forwardRef(({ job }, ref) => {
   const [element, controls] = useScroll();
@@ -13,7 +13,7 @@ const Component = React.forwardRef(({ job }, ref) => {
       <SJob
         animate={controls}
         variants={fadeAnim}
-        initial={"hidden"}
+        initial="hidden"
         ref={element}
         key={job.id}
       >

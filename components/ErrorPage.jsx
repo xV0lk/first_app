@@ -1,17 +1,15 @@
 import styled from 'styled-components';
 
-const ErrorPage = ({ path }) => {
-  return (
-    <SError>
-      <h1>404</h1>
-      <div className="line" />
-      <h2>
-        No se pudo encontrar: <span>{path}</span>{' '}
-      </h2>
-      <p>Este error se debe a que la página solicitada, no existe</p>
-    </SError>
-  );
-};
+const ErrorPage = ({ path }) => (
+  <SError>
+    <h1>404</h1>
+    <div className="line" />
+    <h2>
+      No se pudo encontrar: <span>{path}</span>{' '}
+    </h2>
+    <p>Este error se debe a que la página solicitada, no existe</p>
+  </SError>
+);
 
 const SError = styled.div`
   min-height: 80vh;

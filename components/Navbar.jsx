@@ -21,8 +21,6 @@ const Navbar = () => (
 );
 function NavItem({ target, name }) {
   const { pathname } = useRouter();
-  console.log(target);
-  console.log(name);
   return (
     <li>
       <Link href={`/${target}`} scroll={false}>

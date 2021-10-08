@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
-const Award = ({ award }) => {
-  return (
-    <SAward>
-      <h3>{award.title}</h3>
-      <div className="line"></div>
-      <p>{award.description}</p>
-    </SAward>
-  );
-};
+const Award = ({ award }) => (
+  <SAward>
+    <h3>{award.title}</h3>
+    <div className="line" />
+    <p>{award.description}</p>
+  </SAward>
+);
 
 const SAward = styled.div`
   padding: 5rem;
