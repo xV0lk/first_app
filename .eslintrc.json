@@ -8,8 +8,7 @@
     "airbnb",
     "prettier",
     "next",
-    "plugin:@next/next/recommended",
-    "next/core-web-vitals"
+    "plugin:@next/next/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
