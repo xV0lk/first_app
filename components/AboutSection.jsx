@@ -23,7 +23,7 @@ const AboutSection = () => {
     };
     window.addEventListener('resize', updateWidth);
     return () => window.removeEventListener('resize', updateWidth);
-  });
+  }, []);
   return (
     <SLayout
       variants={pageAnimation}

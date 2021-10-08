@@ -1,5 +1,4 @@
 import React from 'react';
-import Router from 'next/router';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import AboutSection from '../components/AboutSection';
@@ -9,8 +8,6 @@ import ServicesSection from '../components/ServicesSection';
 import { pageAnimation } from '../src/animation';
 
 function Home() {
-  Router.onRouteChangeStart = () => console.log('loading...');
-  Router.onRouteChangeComplete = () => console.log('loaded');
   return (
     <>
       <Head>
@@ -21,6 +18,7 @@ function Home() {
         initial="hidden"
         animate="show"
         exit="exit"
+        style={{ backgroundColor: '#1b1b1b', fontFamily: 'Inter' }}
       >
         <AboutSection />
         <ServicesSection />
