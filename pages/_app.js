@@ -3,12 +3,10 @@ import { AnimatePresence } from 'framer-motion';
 import { DefaultSeo, NextSeo } from 'next-seo';
 import SEO from '../next-seo.config';
 import GlobalStyle from '../styles/GlobalStyle';
-import Navbar from '../components/Navbar';
 
 function MyApp({ Component, pageProps, router }) {
   return (
     <>
-      <Navbar />
       <DefaultSeo {...SEO} />
       <NextSeo
         title="Content"

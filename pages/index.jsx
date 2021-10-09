@@ -6,6 +6,7 @@ import FaqSection from '../components/FaqSection';
 import ServicesSection from '../components/ServicesSection';
 
 import { pageAnimation } from '../src/animation';
+import Navbar from '../components/Navbar';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Head>
         <title>Capture</title>
       </Head>
+      <Navbar />
       <motion.div
         variants={pageAnimation}
         initial="hidden"

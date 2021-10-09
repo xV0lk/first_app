@@ -1,38 +1,43 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import React from 'react';
 import { pageAnimation, titleAnim } from '../src/animation';
+import Navbar from '../components/Navbar';
 
 const Contacto = () => (
-  <SContact
-    variants={pageAnimation}
-    initial="hidden"
-    animate="show"
-    exit="exit"
-  >
-    <STitle>
+  <>
+    <Navbar />
+    <SContact
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
+      <STitle>
+        <SHide>
+          <motion.h2 variants={titleAnim}>Contacto</motion.h2>
+        </SHide>
+      </STitle>
       <SHide>
-        <motion.h2 variants={titleAnim}>Contacto</motion.h2>
+        <SSocial variants={titleAnim}>
+          <SCircle />
+          <h2>Envíanos un mensaje</h2>
+        </SSocial>
       </SHide>
-    </STitle>
-    <SHide>
-      <SSocial variants={titleAnim}>
-        <SCircle />
-        <h2>Envíanos un mensaje</h2>
-      </SSocial>
-    </SHide>
-    <SHide>
-      <SSocial variants={titleAnim}>
-        <SCircle />
-        <h2>Envíanos un correo</h2>
-      </SSocial>
-    </SHide>
-    <SHide>
-      <SSocial variants={titleAnim}>
-        <SCircle />
-        <h2>Redes Sociales</h2>
-      </SSocial>
-    </SHide>
-  </SContact>
+      <SHide>
+        <SSocial variants={titleAnim}>
+          <SCircle />
+          <h2>Envíanos un correo</h2>
+        </SSocial>
+      </SHide>
+      <SHide>
+        <SSocial variants={titleAnim}>
+          <SCircle />
+          <h2>Redes Sociales</h2>
+        </SSocial>
+      </SHide>
+    </SContact>
+  </>
 );
 
 const SContact = styled(motion.div)`

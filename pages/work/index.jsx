@@ -1,23 +1,29 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import React from 'react';
 import { pageAnimation } from '../../src/animation';
 import AllJobs from '../../src/allJobs';
 import SingleJob from '../../components/SingleJob';
+import Navbar from '../../components/Navbar';
 
 const OurWork = () => {
   const jobs = AllJobs();
   return (
-    <SWork
-      variants={pageAnimation}
-      initial="hidden"
-      animate="show"
-      exit="exit"
-      style={{ background: '#fff' }}
-    >
-      {jobs.map((job) => (
-        <SingleJob key={job.id} job={job} />
-      ))}
-    </SWork>
+    <>
+      <Navbar />
+
+      <SWork
+        variants={pageAnimation}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+        style={{ background: '#fff' }}
+      >
+        {jobs.map((job) => (
+          <SingleJob key={job.id} job={job} />
+        ))}
+      </SWork>
+    </>
   );
 };
 

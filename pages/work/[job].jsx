@@ -2,11 +2,13 @@ import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styled from 'styled-components';
+import React from 'react';
 import AllJobs from '../../src/allJobs';
 import Award from '../../components/Award';
 
 // animations
 import { pageAnimation } from '../../src/animation';
+import Navbar from '../../components/Navbar';
 
 const WorkPage = () => {
   const router = useRouter();
@@ -16,39 +18,42 @@ const WorkPage = () => {
   // TODO: Connect to sanity or any other cms
   if (actualJob) {
     return (
-      <SWork
-        variants={pageAnimation}
-        initial="hidden"
-        animate="show"
-        exit="exit"
-      >
-        <SHeadline>
-          <h2>{actualJob.title}</h2>
-          <div className="img-container">
-            <Image
-              src={actualJob.mainImg}
-              alt={actualJob.title}
-              objectFit="cover"
-              layout="fill"
-            />
-          </div>
-        </SHeadline>
-        <SAwards>
-          {actualJob.awards.map((award) => (
-            <Award award={award} key={award.id} />
-          ))}
-        </SAwards>
-        <SSImage>
-          <div className="img-container">
-            <Image
-              src={actualJob.secondaryImg}
-              alt={actualJob.title}
-              objectFit="cover"
-              layout="fill"
-            />
-          </div>
-        </SSImage>
-      </SWork>
+      <>
+        <Navbar />
+        <SWork
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
+          <SHeadline>
+            <h2>{actualJob.title}</h2>
+            <div className="img-container">
+              <Image
+                src={actualJob.mainImg}
+                alt={actualJob.title}
+                objectFit="cover"
+                layout="fill"
+              />
+            </div>
+          </SHeadline>
+          <SAwards>
+            {actualJob.awards.map((award) => (
+              <Award award={award} key={award.id} />
+            ))}
+          </SAwards>
+          <SSImage>
+            <div className="img-container">
+              <Image
+                src={actualJob.secondaryImg}
+                alt={actualJob.title}
+                objectFit="cover"
+                layout="fill"
+              />
+            </div>
+          </SSImage>
+        </SWork>
+      </>
     );
   }
   return null;
