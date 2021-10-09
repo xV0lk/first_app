@@ -12,11 +12,11 @@ function MyApp({ Component, pageProps, router }) {
       <DefaultSeo {...SEO} />
       <GlobalStyle />
       <Layout>
+        <Navbar />
         <AnimatePresence
           exitBeforeEnter
           onExitComplete={() => window.scrollTo(0, 0)}
         >
-          <Navbar />
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </Layout>
