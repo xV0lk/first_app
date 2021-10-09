@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar';
 function MyApp({ Component, pageProps, router }) {
   return (
     <>
+      <Navbar />
       <DefaultSeo {...SEO} />
       <NextSeo
         title="Content"
@@ -18,7 +19,6 @@ function MyApp({ Component, pageProps, router }) {
         exitBeforeEnter
         onExitComplete={() => window.scrollTo(0, 0)}
       >
-        <Navbar />
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
     </>
