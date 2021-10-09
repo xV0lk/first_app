@@ -11,7 +11,6 @@ function Home() {
   return (
     <>
       <Head>
-        <link rel="stylesheet" href="../styles/load.css" />
         <title>Capture</title>
       </Head>
       <motion.div
