@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,20 +10,12 @@ import {
   photoAnim,
   titleAnim,
 } from '../src/animation';
+import aboutImg from '../public/home1.png';
 import Wave from './wave';
+import useWidth from './useWidth';
 
 const AboutSection = () => {
-  const [width, setWidth] = useState();
-  const visible = width > 1100;
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    const updateWidth = () => {
-      setWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
-  }, []);
+  const [isMobile] = useWidth();
   return (
     <SLayout
       variants={pageAnimation}
@@ -56,14 +48,14 @@ const AboutSection = () => {
       <SIwrapper>
         <motion.div variants={photoAnim}>
           <Image
-            src="/home1.png"
+            src={aboutImg}
             alt="Fotógrafo"
             objectFit="cover"
             layout="fill"
           />
         </motion.div>
       </SIwrapper>
-      {visible && <Wave />}
+      {!isMobile && <Wave />}
     </SLayout>
   );
 };

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
 import ErrorPage from '../components/ErrorPage';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Nav/Navbar';
 
 const Custom404 = () => {
   const router = useRouter();

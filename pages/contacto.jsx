@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import React from 'react';
 import { pageAnimation, titleAnim } from '../src/animation';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Nav/Navbar';
 
 const Contacto = () => (
   <>

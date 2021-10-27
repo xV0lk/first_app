@@ -8,7 +8,7 @@ import Award from '../../components/Award';
 
 // animations
 import { pageAnimation } from '../../src/animation';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/Nav/Navbar';
 
 const WorkPage = () => {
   const router = useRouter();

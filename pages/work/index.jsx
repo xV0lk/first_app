@@ -4,7 +4,7 @@ import React from 'react';
 import { pageAnimation } from '../../src/animation';
 import AllJobs from '../../src/allJobs';
 import SingleJob from '../../components/SingleJob';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/Nav/Navbar';
 
 const OurWork = () => {
   const jobs = AllJobs();
@@ -33,7 +33,7 @@ const SWork = styled(motion.div)`
   padding: 5rem 10rem;
 
   h2 {
-    padding: 1rem 0rem;
+    padding: 1rem 0;
     color: black;
   }
 `;

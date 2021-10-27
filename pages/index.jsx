@@ -6,7 +6,7 @@ import FaqSection from '../components/FaqSection';
 import ServicesSection from '../components/ServicesSection';
 
 import { pageAnimation } from '../src/animation';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Nav/Navbar';
 
 function Home() {
   return (
