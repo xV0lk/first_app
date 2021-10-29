@@ -1,16 +1,34 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
-import Dropdown from './Dropdown';
+import { motion } from 'framer-motion';
+import { dropAnim } from '../../src/animation';
+import NavItem from './NavItem';
+import useClickOutside from '../useClickOutside';
 
 const NavBtn = () => {
   const [open, setOpen] = useState(false);
+  const ref = useRef();
+  useClickOutside(ref, () => setOpen(false));
+
   return (
     <>
-      <SMobileBtn href="#" className="mobile" onClick={() => setOpen(!open)}>
+      <SMobileBtn className="mobile" onClick={() => setOpen(!open)}>
         <Bars />
       </SMobileBtn>
 
-      <Dropdown status={open} />
+      <SDrop
+        variants={dropAnim}
+        initial="hidden"
+        animate={open ? 'show' : 'exit'}
+        exit="exit"
+        ref={ref}
+      >
+        <ul>
+          <NavItem target="" name="Qué hacemos" />
+          <NavItem target="work" name="Nuestros trabajos" />
+          <NavItem target="contacto" name="Contáctanos" />
+        </ul>
+      </SDrop>
     </>
   );
 };
@@ -26,11 +44,38 @@ const SMobileBtn = styled.a`
   text-align: center;
   text-decoration: none;
   color: white;
-  z-index: 1;
   transition: all 0.3s;
 
   &:hover {
     filter: brightness(1.2);
+  }
+`;
+
+const SDrop = styled(motion.div)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #282828;
+  padding: 1rem;
+  overflow: hidden;
+  width: 100vw;
+  .close-btn {
+    color: #484a4d;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      .a-link {
+        margin-right: 0;
+        font-size: 1.7rem;
+      }
+    }
   }
 `;
 

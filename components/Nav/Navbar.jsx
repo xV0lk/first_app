@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import useWidth from '../useWidth';
@@ -7,22 +7,22 @@ import NavItem from './NavItem';
 import NavBtn from './NavBtn';
 
 const Navbar = () => {
-  const router = useRouter();
   let [isMobile] = useWidth();
   isMobile = typeof isMobile !== 'undefined' ? isMobile : false;
-  if (router.isFallback) {
-    return (
-      <SNavbar>
-        <h1>
-          <Link href="/" scroll={false} passHref>
-            <motion.a id="logo" whileHover={{ color: '#23d997' }}>
-              Content
-            </motion.a>
-          </Link>
-        </h1>
-      </SNavbar>
-    );
-  }
+  // const router = useRouter();
+  // if (router.isFallback) {
+  //   return (
+  //     <SNavbar>
+  //       <h1>
+  //         <Link href="/" scroll={false} passHref>
+  //           <motion.a id="logo" whileHover={{ color: '#23d997' }}>
+  //             Content
+  //           </motion.a>
+  //         </Link>
+  //       </h1>
+  //     </SNavbar>
+  //   );
+  // }
   return (
     <SNavbar>
       <h1>

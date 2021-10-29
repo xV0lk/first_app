@@ -18,7 +18,7 @@ const useWidth = () => {
     };
     window.addEventListener('resize', updateWidth);
     return () => window.removeEventListener('resize', updateWidth);
-  }, [isMobile]);
+  }, []);
 
   return [isMobile];
 };

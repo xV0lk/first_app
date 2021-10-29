@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
   }
   
   html{
@@ -81,7 +83,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    padding: 3rem 0rem;
+    padding: 3rem 0;
     color: #ccc;
     font-size: 1.4rem;
     line-height: 150%
@@ -90,7 +92,7 @@ const GlobalStyle = createGlobalStyle`
   ul {
     list-style-type: circle;
     list-style-position: inside;
-    padding: 3rem 0rem;
+    padding: 3rem 0;
   }
 
   li {

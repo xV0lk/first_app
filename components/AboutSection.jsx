@@ -52,6 +52,7 @@ const AboutSection = () => {
             alt="Fotógrafo"
             objectFit="cover"
             layout="fill"
+            priority="true"
           />
         </motion.div>
       </SIwrapper>

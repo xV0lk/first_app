@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
-import clock from '../src/img/clock.svg';
-import diaphragm from '../src/img/diaphragm.svg';
-import money from '../src/img/money.svg';
-import teamwork from '../src/img/teamwork.svg';
+import { Clock, Money, Team, Camera } from '../src/img/svgs';
 import home2 from '../src/img/home2.png';
 import { useScroll } from './useScroll';
 
@@ -27,14 +24,18 @@ const ServicesSection = () => {
         <SCards>
           <SCard>
             <div className="icon">
-              <Image src={clock} alt="clock icon" />
+              <span>
+                <Clock />
+              </span>
               <h3>Agilidad</h3>
             </div>
             <p>Soluciones oportunas para los desafíos del mercado.</p>
           </SCard>
           <SCard>
             <div className="icon">
-              <Image src={diaphragm} alt="diaphragm icon" />
+              <span>
+                <Camera />
+              </span>
               <h3>Calidad</h3>
             </div>
             <p>
@@ -43,22 +44,26 @@ const ServicesSection = () => {
           </SCard>
           <SCard>
             <div className="icon">
-              <Image src={money} alt="money icon" />
+              <span>
+                <Money />
+              </span>
               <h3>Costo</h3>
             </div>
             <p>Nos se adecuamos a tus necesidades y presupuesto.</p>
           </SCard>
           <SCard>
             <div className="icon">
-              <Image src={teamwork} alt="teamwork icon" />
-              <h3>Profesionales</h3>
+              <span>
+                <Team />
+              </span>
+              <h3>Compromiso</h3>
             </div>
             <p>Comprometidos y dedicamos con tu crecimiento</p>
           </SCard>
         </SCards>
       </SDescription>
       <SIwrapper>
-        <div>
+        <div className="camera-container">
           <Image src={home2} alt="Camara" objectFit="cover" layout="fill" />
         </div>
       </SIwrapper>
@@ -73,7 +78,7 @@ const SServices = styled(SLayout)`
 
   p {
     width: 70%;
-    padding: 2rem 0rem 4rem 0rem;
+    padding: 2rem 0 4rem 0;
   }
 `;
 
@@ -104,6 +109,7 @@ const SCard = styled.div`
     padding: 2rem 3rem;
     .icon {
       justify-content: center;
+      min-width: 50px;
     }
     p {
       width: 100%;
@@ -115,6 +121,12 @@ const SCard = styled.div`
   }
   @media (max-width: 500px) {
     flex-basis: calc(100% / 2);
+    padding: 2rem 1rem;
+  }
+  @media (max-width: 386px) {
+    flex-basis: calc(100% / 2);
+    padding: 2rem 0.5rem;
+    font-size: 0.9rem;
   }
 `;
 

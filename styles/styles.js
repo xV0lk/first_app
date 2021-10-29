@@ -21,7 +21,7 @@ export const SLayout = styled(motion.div)`
     }
   }
   @media (max-width: 700px) {
-    padding: 2rem 0rem;
+    padding: 2rem 0;
   }
 `;
 
@@ -50,6 +50,19 @@ export const SIwrapper = styled.div`
     position: relative;
     width: 100%;
     height: 80vh;
+
+    @media (max-width: 1100px) {
+      height: 65vh;
+    }
+    @media (max-width: 900px) {
+      height: 60vh;
+    }
+    @media (max-width: 600px) {
+      height: 55vh;
+    }
+    @media (max-width: 500px) {
+      height: 50vh;
+    }
   }
 `;
 
