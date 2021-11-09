@@ -64,7 +64,6 @@ const SWork = styled(motion.div)`
 `;
 
 const SHeadline = styled.div`
-  min-height: 85vh;
   padding-top: 19vh;
   position: relative;
   h2 {
@@ -81,12 +80,28 @@ const SHeadline = styled.div`
 `;
 
 const SAwards = styled.div`
-  min-height: 80vh;
+  min-height: 55vh;
   display: flex;
-  margin: 5rem 10rem;
+  margin: 0 10rem;
   align-items: center;
   justify-content: space-around;
   color: white;
+  @media (max-width: 1100px) {
+    margin: 0 5rem;
+  }
+  @media (max-width: 900px) {
+    margin: 0 2.5rem;
+  }
+  @media (max-width: 700px) {
+    flex-direction: column;
+    margin: 3rem 15rem;
+  }
+  @media (max-width: 500px) {
+    margin: 5rem 10rem;
+  }
+  @media (max-width: 400px) {
+    margin: 5rem 6rem;
+  }
 `;
 
 const SSImage = styled.div`
@@ -94,7 +109,19 @@ const SSImage = styled.div`
   .img-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
+    @media (max-width: 1100px) {
+      height: 65vh;
+    }
+    @media (max-width: 900px) {
+      height: 60vh;
+    }
+    @media (max-width: 600px) {
+      height: 55vh;
+    }
+    @media (max-width: 500px) {
+      height: 50vh;
+    }
   }
 `;
 

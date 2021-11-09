@@ -96,6 +96,7 @@ const FaqSection = () => {
 
 const SFaq = styled(SLayout)`
   display: block;
+  min-height: 80vh;
 
   span {
     display: block;
@@ -118,6 +119,9 @@ const SFaq = styled(SLayout)`
     cursor: pointer;
     @media (max-width: 700px) {
       padding: 1.2rem 5rem;
+    }
+    @media (max-width: 600px) {
+      padding: 1.2rem 2rem;
     }
   }
 
@@ -146,8 +150,14 @@ const SFaq = styled(SLayout)`
     }
   }
   @media (max-width: 1100px) {
+    min-height: 80vh;
+    padding-bottom: 0.5rem;
     h2 {
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+    h4 {
+      font-size: 1.5rem;
     }
   }
 `;

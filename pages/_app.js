@@ -4,6 +4,7 @@ import { DefaultSeo, NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import SEO from '../next-seo.config';
 import GlobalStyle from '../styles/GlobalStyle';
+import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps, router }) {
   const nRouter = useRouter();
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps, router }) {
         onExitComplete={() => window.scrollTo(0, 0)}
       >
         <Component {...pageProps} key={router.route} />
+        <Footer />
       </AnimatePresence>
     </>
   );

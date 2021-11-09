@@ -10,6 +10,7 @@ const Award = ({ award }) => (
 
 const SAward = styled.div`
   padding: 5rem;
+  flex-basis: calc(100% / 3);
   h3 {
     font-size: 2rem;
   }
@@ -21,6 +22,27 @@ const SAward = styled.div`
   }
   p {
     padding: 2rem 0rem;
+  }
+
+  @media (max-width: 1100px) {
+    flex-basis: calc(90% / 3);
+    padding: 5rem 3rem;
+  }
+  @media (max-width: 900px) {
+    padding: 5rem 0;
+    h3 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+  @media (max-width: 700px) {
+    padding: 5rem 0;
+    h3 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
   }
 `;
 

@@ -36,6 +36,16 @@ const SWork = styled(motion.div)`
     padding: 1rem 0;
     color: black;
   }
+
+  @media (max-width: 1100px) {
+    padding: 5rem;
+  }
+  @media (max-width: 900px) {
+    padding: 2rem;
+  }
+  @media (max-width: 700px) {
+    padding: 1.6rem;
+  }
 `;
 
 export default OurWork;

@@ -43,7 +43,7 @@ const Contacto = () => (
 const SContact = styled(motion.div)`
   padding: 5rem 10rem;
   color: #353535;
-  min-height: 89vh;
+  min-height: 80vh;
   background: #fff;
 `;
 
