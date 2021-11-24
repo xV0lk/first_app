@@ -18,10 +18,10 @@ const SAward = styled.div`
     width: 100%;
     height: 0.5rem;
     background: #23d997;
-    margin: 1rem 0rem;
+    margin: 1rem 0;
   }
   p {
-    padding: 2rem 0rem;
+    padding: 2rem 0;
   }
 
   @media (max-width: 1100px) {
