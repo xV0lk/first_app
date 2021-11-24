@@ -13,29 +13,29 @@ const Contacto = () => (
       animate="show"
       exit="exit"
     >
-      <STitle>
-        <SHide>
-          <motion.h2 variants={titleAnim}>Contacto</motion.h2>
-        </SHide>
-      </STitle>
-      <SHide>
-        <SSocial variants={titleAnim}>
-          <SCircle />
-          <h2>Envíanos un mensaje</h2>
-        </SSocial>
-      </SHide>
-      <SHide>
-        <SSocial variants={titleAnim}>
-          <SCircle />
-          <h2>Envíanos un correo</h2>
-        </SSocial>
-      </SHide>
-      <SHide>
-        <SSocial variants={titleAnim}>
-          <SCircle />
-          <h2>Redes Sociales</h2>
-        </SSocial>
-      </SHide>
+      {/* <STitle> */}
+      {/*  <SHide> */}
+      {/*    <motion.h2 variants={titleAnim}>Contacto</motion.h2> */}
+      {/*  </SHide> */}
+      {/* </STitle> */}
+      {/* <SHide> */}
+      {/*  <SSocial variants={titleAnim}> */}
+      {/*    <SCircle /> */}
+      {/*    <h2>Envíanos un mensaje</h2> */}
+      {/*  </SSocial> */}
+      {/* </SHide> */}
+      {/* <SHide> */}
+      {/*  <SSocial variants={titleAnim}> */}
+      {/*    <SCircle /> */}
+      {/*    <h2>Envíanos un correo</h2> */}
+      {/*  </SSocial> */}
+      {/* </SHide> */}
+      {/* <SHide> */}
+      {/*  <SSocial variants={titleAnim}> */}
+      {/*    <SCircle /> */}
+      {/*    <h2>Redes Sociales</h2> */}
+      {/*  </SSocial> */}
+      {/* </SHide> */}
     </SContact>
   </>
 );

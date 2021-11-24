@@ -64,13 +64,14 @@ const SWork = styled(motion.div)`
 `;
 
 const SHeadline = styled.div`
-  padding-top: 19vh;
   position: relative;
   h2 {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -10%);
+    //  position: absolute;
+    //  top: 7%;
+    //  left: 50%;
+    //  transform: translate(-50%, -10%);
+    text-align: center;
+    padding: 4rem 0;
   }
   .img-container {
     position: relative;

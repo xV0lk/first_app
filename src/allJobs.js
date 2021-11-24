@@ -9,28 +9,28 @@ import theracer2 from './img/the-racer2.jpg';
 const AllJobs = () => [
   {
     id: 1,
-    title: 'Atleta',
+    title: 'Boxeo',
     mainImg: athlete,
     secondaryImg: athlete2,
-    route: 'atleta',
+    route: 'boxeo',
     awards: [
       {
         id: 11,
-        title: 'Truly A masterpiece',
+        title: 'Aprendí a mostrar mi negocio',
         description:
-          '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+          '“Trabajar con el equipo de Content, me enseñó a llegar al público.”',
       },
       {
         id: 12,
-        title: 'Fresh look on a brutal sport.',
+        title: 'Súper profesionales.',
         description:
-          '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+          '“Lograron todo lo que queríamos para nuestro gimnasio y nos enseñaron mucho en el proceso.”',
       },
       {
         id: 13,
-        title: 'It’s okay lmao.',
+        title: 'Resultados.',
         description:
-          '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+          '“Gracias al trabajo que hicimos con Content, nuestros clientes han aumentado.”',
       },
     ],
   },
@@ -43,21 +43,15 @@ const AllJobs = () => [
     awards: [
       {
         id: 21,
-        title: 'Truly A masterpiece',
+        title: 'Para toda la vida',
         description:
-          '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+          '“Confiamos en ellos un evento tan importante como nuestro matrimonio y su trabajo hizo que los recuerdos duren para toda la vida.”',
       },
       {
         id: 22,
-        title: 'Fresh look on a brutal sport.',
+        title: 'Un resultado hermoso.',
         description:
-          '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
-      },
-      {
-        id: 23,
-        title: 'It’s okay lmao.',
-        description:
-          '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+          '“Todo su trabajo fue de muy buena calidad y el equipo muy profesional.”',
       },
     ],
   },

@@ -117,6 +117,7 @@ const SFaq = styled(SLayout)`
   .question {
     padding: 1.2rem 0;
     cursor: pointer;
+    height: 100%;
     @media (max-width: 700px) {
       padding: 1.2rem 5rem;
     }
