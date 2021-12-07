@@ -66,10 +66,6 @@ const SWork = styled(motion.div)`
 const SHeadline = styled.div`
   position: relative;
   h2 {
-    //  position: absolute;
-    //  top: 7%;
-    //  left: 50%;
-    //  transform: translate(-50%, -10%);
     text-align: center;
     padding: 4rem 0;
   }

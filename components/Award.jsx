@@ -21,15 +21,18 @@ const SAward = styled.div`
     margin: 1rem 0;
   }
   p {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 
   @media (max-width: 1100px) {
     flex-basis: calc(90% / 3);
     padding: 5rem 3rem;
+    .line {
+      height: 0.3rem;
+    }
   }
   @media (max-width: 900px) {
-    padding: 5rem 0;
+    padding: 3rem 0;
     h3 {
       font-size: 1.8rem;
     }
@@ -38,7 +41,7 @@ const SAward = styled.div`
     }
   }
   @media (max-width: 700px) {
-    padding: 5rem 0;
+    padding: 2.5rem 0;
     h3 {
       font-size: 1.5rem;
       text-align: center;

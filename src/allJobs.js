@@ -1,10 +1,10 @@
 // Import Images
-import athlete from './img/athlete-small.png';
+import athlete from './img/box-main.jpg';
 import goodtimes from './img/goodtimes-small.png';
-import theracer from './img/theracer-small.png';
+import theracer from './img/model-main.jpg';
 import athlete2 from './img/athlete2.png';
 import goodtimes2 from './img/good-times2.jpg';
-import theracer2 from './img/the-racer2.jpg';
+import theracer2 from './img/model2.jpg';
 
 const AllJobs = () => [
   {

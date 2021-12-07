@@ -46,7 +46,7 @@ const Navbar = () => {
 };
 
 const SNavbar = styled.nav`
-  min-height: 10vh;
+  min-height: 7vh;
   display: flex;
   margin: auto;
   justify-content: space-between;
@@ -95,6 +95,7 @@ const SNavbar = styled.nav`
 
   @media (max-width: 1100px) {
     padding: 0 5rem;
+    min-height: 9vh;
     .desktop {
       display: none;
     }

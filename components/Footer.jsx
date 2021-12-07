@@ -26,8 +26,8 @@ const Footer = () => (
 );
 
 const SFooter = styled.footer`
-  min-height: 10vh;
-  padding: 0 10rem;
+  min-height: 7vh;
+  //padding: 0 10rem;
   background: #282828;
   display: flex;
   align-items: center;
@@ -35,11 +35,11 @@ const SFooter = styled.footer`
   .container {
     display: flex;
     justify-content: space-evenly;
-    width: 30vw;
+    width: 40vw;
     align-items: center;
   }
   div:not(.container) {
-    height: 2.5rem;
+    height: 2rem;
   }
 
   .line {
@@ -60,7 +60,23 @@ const SFooter = styled.footer`
   }
 
   @media (max-width: 1100px) {
-    padding: 0 5rem;
+    min-height: 8vh;
+    .container {
+      width: 60vw;
+    }
+    div:not(.container) {
+      height: 1.8rem;
+    }
+  }
+  @media (max-width: 700px) {
+    .container {
+      width: 65vw;
+    }
+  }
+  @media (max-width: 500px) {
+    .container {
+      width: 70vw;
+    }
   }
 `;
 
