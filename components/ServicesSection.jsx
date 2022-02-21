@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { Clock, Money, Team, Camera } from '../src/img/svgs';
-import home2 from '../src/img/home2.png';
+import home2 from '../src/img/home-new.jpg';
 import { useScroll } from './useScroll';
 
 import { SDescription, SIwrapper, SLayout } from '../styles/styles';
